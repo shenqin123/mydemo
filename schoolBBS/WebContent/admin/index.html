@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理界面</title>
+<link href="images/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="javascript/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	//setMenuHeight
+	$('.menu').height($(window).height()-51-27-26);
+	$('.sidebar').height($(window).height()-51-27-26);
+	$('.page').height($(window).height()-51-27-26);
+	$('.page iframe').width($(window).width()-15-168);
+	
+	//menu on and off
+	$('.btn').click(function(){
+		$('.menu').toggle();
+		
+		if($(".menu").is(":hidden")){
+			$('.page iframe').width($(window).width()-15+5);
+			}else{
+			$('.page iframe').width($(window).width()-15-168);
+				}
+		});
+	//
+	$('.subMenu a[href="#"]').click(function(){
+		$(this).next('ul').toggle();
+		return false;
+		});
+});
+</script>
+
+
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="logo fleft"></div>
+			<div class="nav fleft">
+				<ul>
+					<div class="nav-left fleft"></div>
+					<li><a href="admin_main.jsp" target="right">管理讲座</a>
+					</li>
+					<li><a href="/schoolBBS/ShowCourseAction?id=4" target="right">抽取名单</a>
+					</li>
+					<li><a href="baoming.html" target="right">用户报名</a>
+					</li>
+					<li><a href="addUser.jsp" target="right">增加用户</a>
+					</li>
+					</li>
+					<li><a href="/schoolBBS/ShowUserAction" target="right">全部用户</a>
+					</li>
+					</li>
+					<!-- </li>
+					<li><a href="/schoolBBS/ShowCourseAction" target="right">已安排名单</a>
+					</li> -->
+				</ul>
+			</div>
+			<!-- 退出按钮 -->
+			<a class="logout fright" href="../index.html"></a>
+			<div class="clear"></div>
+			<div class="subnav">
+				<div class="subnavLeft fleft"></div>
+				<div class="fleft"></div>
+				<div class="subnavRight fright"></div>
+			</div>
+		</div>
+		<div id="content">
+			<div class="space"></div>
+			<div class="menu fleft">
+				<ul>
+					<li class="subMenuTitle">管理讲座</li>
+					<li class="subMenu"><a href="/schoolBBS/ShowCourseAction?id=1" target="right">查看讲座</a>
+					</li>
+					<li class="subMenu"><a href="addcourse.jsp" target="right">上传讲座信息</a>
+					</li>
+					<li class="subMenu"><a href="/schoolBBS/ShowCourseAction?id=2" target="right">修改讲座信息</a>
+					</li>
+					<li class="subMenu"><a href="/schoolBBS/ShowCourseAction?id=3" target="right">删除讲座信息</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sidebar fleft">
+				<div class="btn"></div>
+			</div>
+			<div class="page">
+				<iframe width="100%" scrolling="auto" height="100%"
+					frameborder="false" allowtransparency="true"
+					style="border: medium none;" src="admin_main.jsp" id="rightMain"
+					name="right"></iframe>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>

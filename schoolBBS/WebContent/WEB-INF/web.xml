@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+  
+  <!-- 登录检查 -->
+  <servlet>
+		<servlet-name>LoginAction</servlet-name>
+		<servlet-class>action.LoginAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginAction</servlet-name>
+		<url-pattern>/loginAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LogoutAction</servlet-name>
+		<servlet-class>action.LogoutAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutAction</servlet-name>
+		<url-pattern>/LogoutAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowCourseAction</servlet-name>
+		<servlet-class>action.ShowCourseAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowCourseAction</servlet-name>
+		<url-pattern>/ShowCourseAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowOneCoursesAction</servlet-name>
+		<servlet-class>action.ShowOneCoursesAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowOneCoursesAction</servlet-name>
+		<url-pattern>/ShowOneCoursesAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddCourseAction</servlet-name>
+		<servlet-class>action.AddCourseAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddCourseAction</servlet-name>
+		<url-pattern>/AddCourseAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddUserAction</servlet-name>
+		<servlet-class>action.AddUserAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddUserAction</servlet-name>
+		<url-pattern>/AddUserAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteCourseAction</servlet-name>
+		<servlet-class>action.DeleteCourseAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteCourseAction</servlet-name>
+		<url-pattern>/DeleteCourseAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateCoursesAction</servlet-name>
+		<servlet-class>action.UpdateCoursesAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateCoursesAction</servlet-name>
+		<url-pattern>/UpdateCoursesAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AnPaiAction</servlet-name>
+		<servlet-class>action.AnPaiAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AnPaiAction</servlet-name>
+		<url-pattern>/AnPaiAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowArrangedCoursesAction</servlet-name>
+		<servlet-class>action.ShowArrangedCoursesAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowArrangedCoursesAction</servlet-name>
+		<url-pattern>/ShowArrangedCoursesAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UserInfoCourses</servlet-name>
+		<servlet-class>action.UserInfoCourses</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserInfoCourses</servlet-name>
+		<url-pattern>/UserInfoCourses</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowUserAction</servlet-name>
+		<servlet-class>action.ShowUserAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowUserAction</servlet-name>
+		<url-pattern>/ShowUserAction</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
